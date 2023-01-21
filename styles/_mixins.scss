@@ -1,0 +1,23 @@
+/*RWD*/
+
+@mixin tablet() {
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin tabletAndMobile() {
+  @include tablet {
+    @content;
+  }
+
+  @include mobile {
+    @content;
+  }
+}
